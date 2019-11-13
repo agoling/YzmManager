@@ -84,7 +84,7 @@ namespace YzmManager.Service
             SetWmOption(6, 80);
             var sbResult = new StringBuilder('\0', 256);
             var success = GetImageFromFile(imgPath, sbResult);
-            //File.Delete(imgPath);
+            File.Delete(imgPath);
             return success ? sbResult.ToString() : "fail";
         }
     }
